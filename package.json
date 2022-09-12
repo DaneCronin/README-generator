@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "A dynamic README generator based on user input in Command Line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaneCronin/README-generator.git"
+  },
+  "author": "Dane Cronin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaneCronin/README-generator/issues"
+  },
+  "homepage": "https://github.com/DaneCronin/README-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
