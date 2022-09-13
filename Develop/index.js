@@ -2,7 +2,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-//console.log(inquirer)
+// Internal module to link to Generate Markdown.js
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Inquirer prompts for user input
 
@@ -11,7 +12,7 @@ const questions = () => {
 
     {
         type: 'input',
-        message: "What is your GitHub username? (Required. No @ needed)",
+        message: "What is your GitHub username? (Required)",
         name: 'username',
         validate: usernameInput => {
             if (usernameInput) {
@@ -105,11 +106,12 @@ const questions = () => {
 ]);
 };
 
+// Function to write README file
+function writeToFile(fileName, data) {
+    fs.writeToFile(fileName, data, err => err ? console.log(err) : console.log('README generated successfully!'));
+}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
+//Function to initialize app
 function init() {
     questions()
   .then(answers => console.log(answers))
