@@ -12,23 +12,56 @@ const questions = () => {
     {
         type: 'input',
         message: "What is your GitHub username? (Required. No @ needed)",
-        name: 'username'
+        name: 'username',
+        validate: usernameInput => {
+            if (usernameInput) {
+              return true;
+            } else {
+              console.log('Please enter your name!');
+              return false;
+            }
+          }
+        
     },
     {
         type: 'input',
         message: 'What is your email address? (Required)',
-        name: 'email'
+        name: 'email',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please enter your email!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         message: "Enter GitHub link to your repo (Required)",
-        name: 'repo'
+        name: 'repo',
+        validate: repoInput => {
+            if (repoInput) {
+              return true;
+            } else {
+              console.log('Please enter the GitHub link to your repo!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
-        message: "What is the title of your project?",
+        message: "What is the title of your project? (Required)",
         name: 'title',
-        default: 'Project Title'
+        default: 'Project Title',
+        validate: titleInput => {
+            if (titleInput) {
+              return true;
+            } else {
+              console.log('Please enter a title for your project!');
+              return false;
+            }
+          }
     },
     {
         type: 'checkbox',
