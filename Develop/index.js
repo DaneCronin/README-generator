@@ -2,22 +2,26 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+//console.log(inquirer)
 
 // Inquirer prompts for user input
-const questions = [
+
+const questions = () => {
+    return inquirer.prompt([
+
     {
         type: 'input',
-        message: "What is your GitHub username? (No @ needed)",
+        message: "What is your GitHub username? (Required. No @ needed)",
         name: 'username'
     },
     {
         type: 'input',
-        message: 'What is your email address?',
+        message: 'What is your email address? (Required)',
         name: 'email'
     },
     {
         type: 'input',
-        message: "What is the name of your GitHub repo?",
+        message: "Enter GitHub link to your repo (Required)",
         name: 'repo'
     },
     {
@@ -27,7 +31,7 @@ const questions = [
         default: 'Project Title'
     },
     {
-        type: 'list',
+        type: 'checkbox',
         message: "Please select what you would like in your table of contents.",
         choices: ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions?'],
         name: 'table of contents',
@@ -65,13 +69,18 @@ const questions = [
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
     },
-];
+]);
+};
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
+    questions()
+  .then(answers => console.log(answers))
+  
 
 }
 
