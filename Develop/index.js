@@ -68,7 +68,7 @@ const questions = () => {
         type: 'checkbox',
         message: "Please select what you would like in your table of contents.",
         choices: ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions?'],
-        name: 'table of contents',
+        name: 'table_of_contents',
         default: 'Table of Contents'
     },
     {
@@ -115,8 +115,12 @@ function writeToFile(fileName, data) {
 function init() {
     questions()
   .then(answers => console.log(answers))
-  
-
+  .then(writeToFile => {
+    console.log("README generated!");
+  })
+  .catch(err => {
+    console.log(err);
+});
 }
 
 // Function call to initialize app
