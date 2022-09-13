@@ -1,14 +1,19 @@
-// TODO: Include packages needed for this application
+// Required Packages
 const fs = require('fs');
 const inquirer = require('inquirer');
 
 
-// TODO: Create an array of questions for user input
+// Inquirer prompts for user input
 const questions = [
     {
         type: 'input',
         message: "What is your GitHub username? (No @ needed)",
         name: 'username'
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email'
     },
     {
         type: 'input',
@@ -23,8 +28,8 @@ const questions = [
     },
     {
         type: 'list',
-        message: "Please enter your table of contents.",
-        choices: ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License'],
+        message: "Please select what you would like in your table of contents.",
+        choices: ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions?'],
         name: 'table of contents',
         default: 'Table of Contents'
     },
@@ -59,7 +64,7 @@ const questions = [
         message: "Choose a license for your project.",
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
-    }
+    },
 ];
 
 // TODO: Create a function to write README file
