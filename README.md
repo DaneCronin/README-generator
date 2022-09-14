@@ -24,6 +24,11 @@
 
   The user will be presented with a series of questions to answer to build the README file
   
+  Screenshot of generated README:
+  ![image](https://user-images.githubusercontent.com/107944830/190209222-d7ae4686-d74d-463a-85a5-4a913649ac77.png)
+
+  
+  Link to Video Tutorial:
   https://drive.google.com/file/d/1MkNM2Fr5MvJ80lE7kAUO-7g1RIHCzPSn/view
 
   ## Contributing
