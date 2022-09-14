@@ -2,40 +2,66 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-//console.log(inquirer)
+// Internal module to link to Generate Markdown.js
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Inquirer prompts for user input
 
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
 
     {
         type: 'input',
-        message: "What is your GitHub username? (Required. No @ needed)",
-        name: 'username'
+        name: 'userName',
+        message: "What is your GitHub username (No @ or spaces needed)? (Required)",
+        validate: userNameInput => {
+            if (userNameInput) {
+              return true;
+            } else {
+              console.log('Please enter your name!');
+              return false;
+            }
+          }
+        
     },
     {
         type: 'input',
         message: 'What is your email address? (Required)',
-        name: 'email'
+        name: 'email',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please enter your email!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         message: "Enter GitHub link to your repo (Required)",
-        name: 'repo'
+        name: 'repo',
+        validate: repoInput => {
+            if (repoInput) {
+              return true;
+            } else {
+              console.log('Please enter the GitHub link to your repo!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
-        message: "What is the title of your project?",
+        message: "What is the title of your project? (Required)",
         name: 'title',
-        default: 'Project Title'
-    },
-    {
-        type: 'checkbox',
-        message: "Please select what you would like in your table of contents.",
-        choices: ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions?'],
-        name: 'table of contents',
-        default: 'Table of Contents'
+        default: 'Project Title',
+        validate: titleInput => {
+            if (titleInput) {
+              return true;
+            } else {
+              console.log('Please enter a title for your project!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
@@ -45,44 +71,53 @@ const questions = () => {
     },
     {
         type: 'input',
-        message: "If applicable, describe the steps required to install your project for the Installation section.",
-        name: 'installation'
+        message: "If applicable, describe the steps required to install your project.",
+        name: 'installation',
+        default: 'Installation'
     },
     {
         type: 'input',
-        message: "Provide instructions and examples of your project in use for the Usage section.",
-        name: 'usage'
+        message: "Give instructions and examples for use.",
+        name: 'usage',
+        default: 'Usage'
     },
     {
         type: 'input',
         message: "If applicable, provide guidelines on how other developers can contribute to your project.",
-        name: 'contributing'
+        name: 'contributing',
+        default: 'Contributing'
     },
     {
         type: 'input',
         message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
-        name: 'tests'
+        name: 'tests',
+        default: 'Tests'
     },
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-        name: 'license'
+        choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'The UnLicense'],
+        name: 'license',
+        default: 'License'
     },
-]);
-};
+];
 
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {
-    questions()
-  .then(answers => console.log(answers))
-  
-
+// Function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => err ? console.log(err) : console.log('README generated successfully!'));
 }
+
+//Function to initialize app
+function init() {
+    inquirer.prompt(questions)
+  .then(function(data) {
+    console.log(data);
+    writeToFile('README.md', generateMarkdown(data));
+  })
+  .catch(err => {
+    console.log(err);
+});
+};
 
 // Function call to initialize app
 init();
