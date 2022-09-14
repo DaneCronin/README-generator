@@ -1,4 +1,4 @@
-# ReadMe Generator
+ # ReadMe Generator
   ![badge](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Table of Contents:
@@ -36,5 +36,8 @@
   For any questions, please contact me through the information below:
  
   GitHub: [DaneCronin](https://github.com/DaneCronin)
+
   Email: DaneCronin@gmail.com	
+  
   Link to repo on GitHub: www.github.com/danecronin/readme-generator
+
