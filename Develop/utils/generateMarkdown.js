@@ -51,18 +51,22 @@ if (badgeChoice === 'Apache 2.0 License') {
 
   ## Installation
   *Steps required to install project and how to get application running*
+  
   ${data.installation}
 
   ## Usage
   *Instructions and examples for use:*
+
   ${data.usage}
 
   ## Contributing
   *Please follow these guidelines if you would like to contribute:*
+
   ${data.contributing}
 
   ## Tests
   *Tests for application and how to run them:*
+
   ${data.tests}
 
   ## License
