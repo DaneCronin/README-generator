@@ -1,6 +1,10 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === null) {
+    return " ";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -12,10 +16,18 @@ function renderLicenseSection(license) {}
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
+  console.log(data);
+
   return `# ${data.title}
 
-  ## Table of Contents
-   ${data.table_of_contents}
+  ## Table of Contents:
+  * Description
+  * Installation
+  * Usage
+  * Contributing
+  * Tests
+  * License
+  * Questions?
 
   ## Description
    ${data.description}

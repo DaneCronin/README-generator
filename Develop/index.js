@@ -65,13 +65,6 @@ const questions = () => {
           }
     },
     {
-        type: 'checkbox',
-        message: "Please select what you would like in your table of contents.",
-        choices: ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions?'],
-        name: 'table_of_contents',
-        default: 'Table of Contents'
-    },
-    {
         type: 'input',
         message: "Write a description of your project.",
         name: 'description',
@@ -100,24 +93,23 @@ const questions = () => {
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'The Unlicense'],
         name: 'license'
     },
 ]);
 };
 
 // Function to write README file
-function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data, err => err ? console.log(err) : console.log('README generated successfully!'));
+function writeToFile(fileName, generateMarkdown) {
+    const fileName = "README_output.md"
+    fs.writeFile(fileName, generateMarkdown, err => err ? console.log(err) : console.log('README generated successfully!'));
 }
 
 //Function to initialize app
 function init() {
     questions()
   .then(answers => console.log(answers))
-  .then(writeToFile => {
-    console.log("README generated!");
-  })
+  .then(writeToFile) 
   .catch(err => {
     console.log(err);
 });
