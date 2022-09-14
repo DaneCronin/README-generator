@@ -27,13 +27,14 @@ if (badgeChoice === 'Apache 2.0 License') {
    licenseLink = 'https://choosealicense.com/licenses/mit/';
  };
 
- if (badgeChoice === 'No license') {
+ if (badgeChoice === 'The Unlicense') {
    badgeChoice = 'https://img.shields.io/badge/license-Unlicense-blue.svg';
    licenseLink = 'https://choosealicense.com/licenses/unlicense/';
  };
 
 
-  return ` # ${data.title}
+  return ` 
+  # ${data.title}
   ![badge](${badgeChoice})
 
   ## Table of Contents:
@@ -49,15 +50,19 @@ if (badgeChoice === 'Apache 2.0 License') {
    ${data.description}
 
   ## Installation
+  *Steps required to install project and how to get application running*
   ${data.installation}
 
   ## Usage
+  *Instructions and examples for use:*
   ${data.usage}
 
   ## Contributing
+  *Please follow these guidelines if you would like to contribute:*
   ${data.contributing}
 
   ## Tests
+  *Tests for application and how to run them:*
   ${data.tests}
 
   ## License
@@ -68,10 +73,12 @@ if (badgeChoice === 'Apache 2.0 License') {
 
   ## Questions?
 
-  For any questions, please contact me through the information below:
+  *For any questions, please contact me through the information below:*
  
   GitHub: [${data.userName}](https://github.com/${data.userName})
+
   Email: ${data.email}
+
   Link to repo on GitHub: ${data.repo}
 
 `;

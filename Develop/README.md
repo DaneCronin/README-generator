@@ -1,5 +1,6 @@
- # readme
-  ![badge](GNU AGPLv3)
+ 
+  # ReadMe Generator
+  ![badge](No License)
 
   ## Table of Contents:
   * [Description](#Description)
@@ -11,31 +12,35 @@
   * [Questions?](#questions)
 
   ## Description
-   lkadfadf
+   generates a professional readme
 
   ## Installation
-  aldkfjadf
+  * Steps required to install project and how to get application running *
+  clone the repo and run npm install to install inquirer
 
   ## Usage
-  kldjfa
+  * Instructions and examples for use: *
+  open repo in your command line and run node index.js to launch questions
 
   ## Contributing
-  alsdkfj
+  * Please follow these guidelines if you would like to contribute: *
+  Contributing
 
   ## Tests
+  *Tests for application and how to run them:*
   Tests
 
   ## License
   
-  GNU AGPLv3
+  No License
 
-  For more information go to: [GNU AGPLv3]()
+  For more information go to: [No License]()
 
   ## Questions?
 
-  For any questions, please contact me through the information below:
+  * For any questions, please contact me through the information below: *
  
-  GitHub: [dane](https://github.com/dane)
-  Email: candadk.com
-  Link to repo on GitHub: gad
+  GitHub: [Dane Cronin](https://github.com/Dane Cronin)
+  Email: DaneCronin@gmail.com
+  Link to repo on GitHub: https://github.com/danecronin/readme-generator
 

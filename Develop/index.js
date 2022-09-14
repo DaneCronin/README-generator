@@ -12,7 +12,7 @@ const questions = [
     {
         type: 'input',
         name: 'userName',
-        message: "What is your GitHub username? (Required)",
+        message: "What is your GitHub username (No @ or spaces needed)? (Required)",
         validate: userNameInput => {
             if (userNameInput) {
               return true;
@@ -96,7 +96,7 @@ const questions = [
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'No License'],
+        choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'The UnLicense'],
         name: 'license',
         default: 'License'
     },
