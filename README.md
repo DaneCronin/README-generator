@@ -17,12 +17,14 @@
   ## Installation
   *Steps required to install project and how to get application running*
   
-  Clone the repo to your local machine.      Navigate to the root directory and run npm install to install the inquirer npm.      Once inquirer has been installed, launch the app by running node index.js
+  To generate your own README, clone the repo to your local machine. Navigate to the root directory and run npm install to install the inquirer npm.      Once inquirer has been installed, launch the app by running node index.js in the command-line.
 
   ## Usage
   *Instructions and examples for use:*
 
-  The user will be presented with a series of questions to answer to build the README file
+  The user will be presented with a series of questions to answer and build the README file.
+  
+  After answering all of the prompts, the new README.md file will be generated in the root directory.
   
   Screenshot of generated README:
   ![image](https://user-images.githubusercontent.com/107944830/190209222-d7ae4686-d74d-463a-85a5-4a913649ac77.png)
