@@ -1,4 +1,5 @@
- # README generator
+ # readme
+  ![badge](GNU AGPLv3)
 
   ## Table of Contents:
   * [Description](#Description)
@@ -10,29 +11,31 @@
   * [Questions?](#questions)
 
   ## Description
-   a simple readme generator
+   lkadfadf
 
   ## Installation
-  run npm install to install inquire 
+  aldkfjadf
 
   ## Usage
-  Usage
+  kldjfa
 
   ## Contributing
-  Contributing
+  alsdkfj
 
   ## Tests
   Tests
 
   ## License
   
-  No License
+  GNU AGPLv3
+
+  For more information go to: [GNU AGPLv3]()
 
   ## Questions?
 
   For any questions, please contact me through the information below:
  
-  GitHub: [DaneCronin](https://github.com/DaneCronin)
-  Email: DaneCronin@gmail.com
-  Link to repo on GitHub: danecronin@gmail.com
+  GitHub: [dane](https://github.com/dane)
+  Email: candadk.com
+  Link to repo on GitHub: gad
 
