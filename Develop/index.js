@@ -7,15 +7,14 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Inquirer prompts for user input
 
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
 
     {
         type: 'input',
+        name: 'userName',
         message: "What is your GitHub username? (Required)",
-        name: 'username',
-        validate: usernameInput => {
-            if (usernameInput) {
+        validate: userNameInput => {
+            if (userNameInput) {
               return true;
             } else {
               console.log('Please enter your name!');
@@ -72,48 +71,53 @@ const questions = () => {
     },
     {
         type: 'input',
-        message: "If applicable, describe the steps required to install your project for the Installation section.",
-        name: 'installation'
+        message: "If applicable, describe the steps required to install your project.",
+        name: 'installation',
+        default: 'Installation'
     },
     {
         type: 'input',
-        message: "Provide instructions and examples of your project in use for the Usage section.",
-        name: 'usage'
+        message: "Give instructions and examples for use.",
+        name: 'usage',
+        default: 'Usage'
     },
     {
         type: 'input',
         message: "If applicable, provide guidelines on how other developers can contribute to your project.",
-        name: 'contributing'
+        name: 'contributing',
+        default: 'Contributing'
     },
     {
         type: 'input',
         message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
-        name: 'tests'
+        name: 'tests',
+        default: 'Tests'
     },
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'The Unlicense'],
-        name: 'license'
+        choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'No License'],
+        name: 'license',
+        default: 'License'
     },
-]);
-};
+];
 
 // Function to write README file
-function writeToFile(fileName, generateMarkdown) {
-    const fileName = "README_output.md"
-    fs.writeFile(fileName, generateMarkdown, err => err ? console.log(err) : console.log('README generated successfully!'));
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => err ? console.log(err) : console.log('README generated successfully!'));
 }
 
 //Function to initialize app
 function init() {
-    questions()
-  .then(answers => console.log(answers))
-  .then(writeToFile) 
+    inquirer.prompt(questions)
+  .then(function(data) {
+    console.log(data);
+    writeToFile('README.md', generateMarkdown(data));
+  })
   .catch(err => {
     console.log(err);
 });
-}
+};
 
 // Function call to initialize app
 init();
