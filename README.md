@@ -1,5 +1,6 @@
- # ReadMe Generator
-  ![badge](https://img.shields.io/badge/License-MIT-yellow.svg)
+ 
+  # ReadMe Generator
+  ![badge](No License)
 
   ## Table of Contents:
   * [Description](#Description)
@@ -11,33 +12,36 @@
   * [Questions?](#questions)
 
   ## Description
-   l
+   generates a professional readme
 
   ## Installation
-  f
+  * Steps required to install project and how to get application running *
+  clone the repo and run npm install to install inquirer
 
   ## Usage
-  a
+  * Instructions and examples for use: *
+  open repo in your command line and run node index.js to launch questions
 
   ## Contributing
-  d
+  * Please follow these guidelines if you would like to contribute: *
+  Contributing
 
   ## Tests
-  d
+  * Tests for application and how to run them: *
+  Tests
 
   ## License
   
-  MIT License
+  No License
 
-  For more information go to: [MIT License](https://choosealicense.com/licenses/mit/)
+  For more information go to: [No License]()
 
   ## Questions?
 
-  For any questions, please contact me through the information below:
+  * For any questions, please contact me through the information below: *
  
-  GitHub: [DaneCronin](https://github.com/DaneCronin)
+  GitHub: [Dane Cronin](https://github.com/Dane Cronin)
+  Email: DaneCronin@gmail.com
+  Link to repo on GitHub: https://github.com/danecronin/readme-generator
 
-  Email: DaneCronin@gmail.com	
-  
-  Link to repo on GitHub: www.github.com/danecronin/readme-generator
 
