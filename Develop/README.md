@@ -1,5 +1,5 @@
  
-  # README.md Generator
+  # Team Profile Generator
   ![badge](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Table of Contents:
@@ -12,23 +12,27 @@
   * [Questions?](#questions)
 
   ## Description
-   This is a commandline questionaire to create a professional ReadMe
+   This is a command-line application designed to allow the user to build their team roster of employees with info cards for the manager, engineers and interns. Each employee card will display contact info such as the employee's name, position, email, and employee ID. This app was designed with Test Driven Development in mind.   When the user has completed building their team, the app will create an HTML file in the distribution folder that will display  a cleanly formatted roster based upon the user's input. 
 
   ## Installation
+  *Steps required to install project and how to get application running*
   
-  install inquirer by running npm install in your root directory of the project after cloning this repo to your local machine.  Launch the app by node index.js
+  To install and run this app:  Clone this repo to your local machine and run "npm install" in your command-line.  The application is launched by running  "node.index.js"  inside the  develop folder dirtectory. 
 
   ## Usage
+  *Instructions and examples for use:*
 
-  once you run node index.js you will be presented with a series of questions to answer and your ReadMe will be generated
+  Usage
 
   ## Contributing
   *Please follow these guidelines if you would like to contribute:*
-  Contributing
+
+  See installation instructions 
 
   ## Tests
   *Tests for application and how to run them:*
-  none
+
+  The tests were run using the Jest npm. Enter "npm run test" in the command-line to run the tests.
 
   ## License
   
@@ -44,5 +48,5 @@
 
   Email: DaneCronin@gmail.com
 
-  Link to repo on GitHub: https://github.com/danecronin/readme-generator
+  Link to repo on GitHub: https://github.com/DaneCronin/Team-Profile-Generator
 
